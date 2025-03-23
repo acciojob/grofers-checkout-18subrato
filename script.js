@@ -16,6 +16,7 @@ const getSumBtn = document.createElement("button");
             let td2 = document.createElement('td')
             td1.innerText = 'Total price'
             td2.innerText = totalSum;
+			row.setAttribute("id","ans")
             row.append(td1,td2);
             table.append(row);
         };
