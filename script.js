@@ -10,15 +10,16 @@ const getSumBtn = document.createElement("button");
         }
 
         const getSum = () => {
-            let table = document.querySelector('table')
-            let row = document.createElement('tr')
-            let td1 = document.createElement('td')
-            let td2 = document.createElement('td')
-            td1.innerText = 'Total price'
-            td2.innerText = totalSum;
-			td2.setAttribute('id','ans')
-            row.append(td1,td2);
-            table.append(row);
+             const newRow = document.createElement("tr");
+        const totalCell = document.createElement("td");
+
+        // Set the cell to span across the table and display the total price
+        totalCell.setAttribute("colspan", 2);
+        totalCell.textContent = `Total Price: ₹${totalSum}`;
+        newRow.appendChild(totalCell);
+
+        // Add the new row to the table
+        document.getElementByTagName("table").appendChild(newRow);
         };
 
 
