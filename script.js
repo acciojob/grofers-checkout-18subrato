@@ -16,7 +16,7 @@ const getSumBtn = document.createElement("button");
        
         totalCell.textContent = `Total Price: ₹${ans}`;
         newRow.append(totalCell);
-		
+		table.setAttribute("id","ans")
        
         document.querySelector("table").append(newRow);
         };
