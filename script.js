@@ -3,10 +3,10 @@ const getSumBtn = document.createElement("button");
         document.body.appendChild(getSumBtn);
 
 
-        let totalSum = 0;
+        let ans = 0;
         let allprices = document.querySelectorAll('.price')
         for (let t of allprices) {
-            totalSum += parseFloat(t.textContent)
+            ans += parseFloat(t.textContent)
         }
 
         const getSum = () => {
@@ -15,11 +15,10 @@ const getSumBtn = document.createElement("button");
 
         // Set the cell to span across the table and display the total price
         totalCell.setAttribute("colspan", 2);
-        totalCell.textContent = `Total Price: ₹${totalSum}`;
+        totalCell.textContent = `Total Price: ₹${ans}`;
         newRow.appendChild(totalCell);
-		newRow.id = "ans"
-
-        // Add the new row to the table
+		
+       
         document.querySelector("table").appendChild(newRow);
         };
 
