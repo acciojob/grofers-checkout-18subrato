@@ -1,23 +1,29 @@
 const getSumBtn = document.createElement("button");
-        getSumBtn.append("Get Total Price");
-        document.body.appendChild(getSumBtn);
+getSumBtn.append("Get Total Price");
+document.body.appendChild(getSumBtn);
 
 
-        let ans = 0;
-        let allprices = document.querySelectorAll('.price')
-        for (let t of allprices) {
-            ans += parseFloat(t.textContent)
-        }
+getSumBtn.addEventListener("click", cal);
+const getSum = () => {
+let sum  = 0;
+	let priceNodeList=document.querySelectorAll('.price');
+	for(let t of priceNodeList){
+		sum+=parseInt(t.innerText);
+	}
 
-        const getSum = () => {
-             const newRow = document.createElement("tr");
-        const totalCell = document.createElement("td");
+	return sum;
+  
+};
 
-       
-        totalCell.textContent = `Total Price: ₹${ans}`;
-        newRow.append(totalCell);
-       
-        document.querySelector("table").append(newRow);
-        };
+function cal(){
+	let totalPrice = getSum();
+	let table = document.querySelector('table');
+	let row = document.createElement('tr')
+	let col = document.createElement('td')
 
-        getSumBtn.addEventListener("click", getSum);
+	col.innerText = `Total Price ${totalPrice}`;
+	row.append(col);
+	table.append(row);
+}
+
+
