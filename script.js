@@ -19,7 +19,7 @@ const getSumBtn = document.createElement("button");
         newRow.appendChild(totalCell);
 
         // Add the new row to the table
-        document.getElementByTagName("table").appendChild(newRow);
+        document.querySelector("table").appendChild(newRow);
         };
 
 
