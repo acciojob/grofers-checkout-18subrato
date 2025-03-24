@@ -17,6 +17,7 @@ const getSumBtn = document.createElement("button");
         totalCell.setAttribute("colspan", 2);
         totalCell.textContent = `Total Price: ₹${totalSum}`;
         newRow.appendChild(totalCell);
+		newRow.id = "ans"
 
         // Add the new row to the table
         document.querySelector("table").appendChild(newRow);
