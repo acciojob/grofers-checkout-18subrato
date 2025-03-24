@@ -13,13 +13,12 @@ const getSumBtn = document.createElement("button");
              const newRow = document.createElement("tr");
         const totalCell = document.createElement("td");
 
-        // Set the cell to span across the table and display the total price
-        totalCell.setAttribute("colspan", 2);
+       
         totalCell.textContent = `Total Price: ₹${ans}`;
-        newRow.appendChild(totalCell);
+        newRow.append(totalCell);
 		
        
-        document.querySelector("table").appendChild(newRow);
+        document.querySelector("table").append(newRow);
         };
 
 
